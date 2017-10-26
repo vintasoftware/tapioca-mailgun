@@ -10,17 +10,17 @@ from .resource_mapping import RESOURCE_MAPPING
 
 
 class MailgunClientAdapter(JSONAdapterMixin, TapiocaAdapter):
-    api_root = 'https://api.mailgun.net/v3'
+    api_root = 'https://api.mailgun.net/v3/'
     resource_mapping = RESOURCE_MAPPING
 
     def get_request_kwargs(self, api_params, *args, **kwargs):
         params = super(MailgunClientAdapter, self).get_request_kwargs(
             api_params, *args, **kwargs)
 
-        
+
         params['auth'] = HTTPBasicAuth(
             api_params.get('user'), api_params.get('password'))
-        
+
 
         return params
 
