@@ -72,7 +72,7 @@ setup(
     long_description=readme,
     author=get_author(package),
     author_email=get_email(package),
-    url='https://github.com/chocoelho/tapioca-mailgun',
+    url='https://github.com/vintasoftware/tapioca-mailgun',
     packages=[
         'tapioca_mailgun',
     ],
